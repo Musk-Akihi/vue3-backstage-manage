@@ -1,18 +1,23 @@
+<!--
+ * @Descripttion:
+ * @TapdLink: https://XXX
+ * @DesignsLink: https://XXX
+ * @RelatedPersons: XXX[市场]、XXX[产品]、XXX[前端]、XXX[后端]、XXX[设计]
+ * @version: 1.0.0
+ * @Author: duxinwu
+ * @Date: 2021-09-13 19:17:25
+ * @LastEditors: duxinwu
+ * @LastEditTime: 2021-09-13 21:26:38
+-->
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    hello world!hello world!hello world!hellohellohellohello hello w orld!helloxaxa world!hello
+    world!hellohellohellohello
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
-  },
-};
+  name: 'Home'
+}
 </script>
