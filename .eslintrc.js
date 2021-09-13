@@ -1,14 +1,3 @@
-/*
- * @Descripttion:
- * @TapdLink: https://XXX
- * @DesignsLink: https://XXX
- * @RelatedPersons: XXX[市场]、XXX[产品]、XXX[前端]、XXX[后端]、XXX[设计]
- * @version: 1.0.0
- * @Author: duxinwu
- * @Date: 2021-09-13 19:22:56
- * @LastEditors: duxinwu
- * @LastEditTime: 2021-09-13 21:32:53
- */
 // ESlint 检查配置
 module.exports = {
   root: true,
