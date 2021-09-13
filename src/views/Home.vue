@@ -10,10 +10,7 @@
  * @LastEditTime: 2021-09-13 21:26:38
 -->
 <template>
-  <div class="home">
-    hello world!hello world!hello world!hellohellohellohello hello w orld!helloxaxa world!hello
-    world!hellohellohellohello
-  </div>
+  <div class="home">hello world!</div>
 </template>
 
 <script>
