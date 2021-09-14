@@ -2,17 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-
-// 完整引入Antd
-// import Antd from 'ant-design-vue'
-// import 'ant-design-vue/dist/antd.css'
-
-import Button from 'ant-design-vue/lib/button'
-import 'ant-design-vue/lib/button/style'
+// 引入antd配置文件
+import antd from './plugins/antd'
 
 const app = createApp(App)
-app.use(router)
-app.use(store)
-// app.use(Antd)
-app.use(Button)
-app.mount('#app')
+app.use(antd)
+app.use(router).use(store).mount('#app')
