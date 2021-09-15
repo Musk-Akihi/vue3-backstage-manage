@@ -8,6 +8,7 @@ const vueCustomConfig = {
     hot: true,
     open: true,
     port: 9000,
+    https: false,
     overlay: {
       warnings: true,
       errors: true
