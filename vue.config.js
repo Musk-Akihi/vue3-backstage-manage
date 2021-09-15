@@ -3,7 +3,8 @@ const {
   outputDir,
   assetsDir,
   lintOnSave,
-  productionSourceMap
+  productionSourceMap,
+  devServer
 } = require('./src/config/vue/vue.custom.config')
 
 module.exports = {
@@ -12,6 +13,7 @@ module.exports = {
   assetsDir,
   lintOnSave,
   productionSourceMap,
+  devServer,
   css: {
     loaderOptions: {
       /**
