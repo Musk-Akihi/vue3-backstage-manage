@@ -27,8 +27,7 @@ module.exports = {
           javascriptEnabled: true
         }
       }
-    },
-    modules: false
+    }
   },
   configureWebpack: {
     //警告 webpack 的性能提示
