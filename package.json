@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "=========== 本地环境命令===========": "",
+    "serve:dev": "vue-cli-service serve --open --mode dev",
+    "build:dev": "vue-cli-service build --mode dev",
+    "=========== 测试环境命令===========": "",
+    "serve:test": "vue-cli-service serve --open --mode test",
+    "build:test": "vue-cli-service build --mode test",
+    "=========== 生产环境命令===========": "",
+    "serve:prod": "vue-cli-service serve --open --mode prod",
+    "build:prod": "vue-cli-service build --mode prod",
     "lint": "vue-cli-service lint",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },

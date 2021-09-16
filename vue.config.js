@@ -15,6 +15,8 @@ module.exports = {
   productionSourceMap,
   devServer,
   css: {
+    extract: true,
+    sourceMap: false,
     loaderOptions: {
       /**
        * less解析语法报错
@@ -25,7 +27,8 @@ module.exports = {
           javascriptEnabled: true
         }
       }
-    }
+    },
+    modules: false
   },
   configureWebpack: {
     //警告 webpack 的性能提示

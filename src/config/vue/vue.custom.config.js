@@ -5,7 +5,7 @@ const vueCustomConfig = {
   lintOnSave: process.env.NODE_ENV !== 'production',
   productionSourceMap: process.env.NODE_ENV === 'production' ? false : true,
   devServer: {
-    hot: true,
+    hot: process.env.NODE_ENV === 'production' ? false : true,
     open: true,
     port: 9000,
     https: false,
