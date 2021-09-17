@@ -25,13 +25,8 @@
 </template>
 
 <script>
-import api from '@/api/index'
-api.getTeacherList({ name: 1 }).then((res) => {
-  console.log(res)
-  console.log('😊😊😊😊😊😊😊😊😊😊')
-})
+import { defineComponent, ref, getCurrentInstance } from 'vue'
 
-import { defineComponent, ref } from 'vue'
 export default defineComponent({
   setup() {
     const iconLoading = ref(false)
@@ -80,6 +75,12 @@ export default defineComponent({
         ]
       }
     ]
+    const { $http } = getCurrentInstance().appContext.config.globalProperties
+
+    $http.getTeacherList({ name: 1 }).then((res) => {
+      console.log(res)
+      console.log('😊😊😊😊😊😊😊😊😊😊')
+    })
 
     return {
       loading: ref(false),

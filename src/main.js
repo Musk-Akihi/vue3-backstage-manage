@@ -2,9 +2,15 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-// 引入antd配置文件
+// 按需引入antd
 import antd from './plugins/antd'
+// 引入全部api
+import api from '@/api/index'
 
 const app = createApp(App)
+// api挂载至全局（不推荐）
+app.config.globalProperties.$http = api
 app.use(antd)
-app.use(router).use(store).mount('#app')
+app.use(router)
+app.use(store)
+app.mount('#app')
