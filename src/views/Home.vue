@@ -25,6 +25,12 @@
 </template>
 
 <script>
+import api from '@/api/index'
+api.getTeacherList({ name: 1 }).then((res) => {
+  console.log(res)
+  console.log('😊😊😊😊😊😊😊😊😊😊')
+})
+
 import { defineComponent, ref } from 'vue'
 export default defineComponent({
   setup() {
