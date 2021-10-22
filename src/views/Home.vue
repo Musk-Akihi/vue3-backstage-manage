@@ -22,15 +22,32 @@
   <div>
     <a-cascader v-model:value="value" :options="options" />
   </div>
+
+  <hr />
+
+  <component-a
+    style="border: 1px solid red"
+    title="dxw"
+    :age="25"
+    :is-man="false"
+    :obj="obj"
+    data-status="activated"
+  >
+    我是默认插槽</component-a
+  >
 </template>
 
 <script>
 import { defineComponent, ref, getCurrentInstance } from 'vue'
+import componentA from './components/componentA.vue'
 
 export default defineComponent({
+  components: {
+    componentA
+  },
+
   setup() {
     const iconLoading = ref(false)
-
     const enterIconLoading = () => {
       iconLoading.value = {
         delay: 1000
@@ -39,7 +56,6 @@ export default defineComponent({
         iconLoading.value = false
       }, 6000)
     }
-
     const options = [
       {
         value: 'zhejiang',
@@ -75,8 +91,12 @@ export default defineComponent({
         ]
       }
     ]
+    const obj = {
+      name: '丽丽',
+      age: 18,
+      sex: '女'
+    }
     const { $http } = getCurrentInstance().appContext.config.globalProperties
-
     $http.getTeacherList({ name: 1 }).then((res) => {
       console.log(res)
       console.log('😊😊😊😊😊😊😊😊😊😊')
@@ -87,7 +107,8 @@ export default defineComponent({
       iconLoading,
       enterIconLoading,
       value: ref([]),
-      options
+      options,
+      obj
     }
   }
 })

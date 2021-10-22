@@ -5,11 +5,17 @@
 - 学习 vue3
 - 保持 composition api 风格
 
-## 启动
+## 前端启动
 
 ```
 npm install
 npm run serve
+```
+
+## 服务启动
+
+```
+node mock
 ```
 
 ### 打包
