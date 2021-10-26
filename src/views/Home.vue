@@ -14,17 +14,13 @@
     <a-button type="primary" shape="circle" loading />
     <a-button danger shape="round" loading />
   </div>
-
   <br />
   <hr />
   <br />
-
   <div>
     <a-cascader v-model:value="value" :options="options" />
   </div>
-
   <hr />
-
   <component-a
     style="border: 1px solid red"
     title="dxw"
@@ -35,15 +31,19 @@
   >
     我是默认插槽</component-a
   >
+  <hr />
+  <component-b ref="componentB" title="componentB组件"> </component-b>
 </template>
 
 <script>
-import { defineComponent, ref, getCurrentInstance } from 'vue'
+import { defineComponent, ref, getCurrentInstance, onMounted } from 'vue'
 import componentA from './components/componentA.vue'
+import componentB from './components/componentB.vue'
 
 export default defineComponent({
   components: {
-    componentA
+    componentA,
+    componentB
   },
 
   setup() {
@@ -102,13 +102,22 @@ export default defineComponent({
       console.log('😊😊😊😊😊😊😊😊😊😊')
     })
 
+    const componentB = ref(null)
+    onMounted(() => {
+      console.log(componentB)
+      console.log(componentB.value)
+      componentB.value.increment()
+      console.log('😊😊😊😊😊😊😊😊😊😊')
+    })
+
     return {
       loading: ref(false),
       iconLoading,
       enterIconLoading,
       value: ref([]),
       options,
-      obj
+      obj,
+      componentB
     }
   }
 })
