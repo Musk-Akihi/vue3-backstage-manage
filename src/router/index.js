@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import modules from './modules'
 
 const routes = [
   {
@@ -8,19 +9,21 @@ const routes = [
   {
     path: '/Home',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "Home" */ '../views/Home.vue')
+    component: () => import('../views/Home.vue')
   },
-  {
-    path: '/customEvent',
-    name: 'customEvent',
-    component: () =>
-      import(/* webpackChunkName: "customEvent" */ '../views/studyVue/customEvent/index.vue')
-  }
+  ...modules
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  next()
 })
 
 export default router
