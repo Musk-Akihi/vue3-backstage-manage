@@ -3,14 +3,18 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
+    redirect: '/Home'
+  },
+  {
+    path: '/Home',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+    component: () => import(/* webpackChunkName: "Home" */ '../views/Home.vue')
   },
   {
     path: '/customEvent',
     name: 'customEvent',
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/studyVue/customEvent/index.vue')
+      import(/* webpackChunkName: "customEvent" */ '../views/studyVue/customEvent/index.vue')
   }
 ]
 
