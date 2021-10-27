@@ -7,6 +7,14 @@ const router = {
   component: () => import('@/views/studyVue/goDeepComponent'),
   children: [
     {
+      path: '',
+      name: 'props',
+      meta: {
+        title: 'props'
+      },
+      component: () => import('@/views/studyVue/goDeepComponent/props')
+    },
+    {
       path: 'customEvent',
       name: 'customEvent',
       meta: {
