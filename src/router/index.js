@@ -5,6 +5,12 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+  },
+  {
+    path: '/customEvent',
+    name: 'customEvent',
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/studyVue/customEvent/index.vue')
   }
 ]
 
