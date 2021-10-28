@@ -37,6 +37,14 @@ const router = {
         title: '插槽'
       },
       component: () => import('@/views/studyVue/goDeepComponent/slot')
+    },
+    {
+      path: 'provideInject',
+      name: 'provideInject',
+      meta: {
+        title: 'provide/inject'
+      },
+      component: () => import('@/views/studyVue/goDeepComponent/provideInject')
     }
   ]
 }
