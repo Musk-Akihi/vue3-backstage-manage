@@ -29,6 +29,14 @@ const router = {
         title: '自定义事件'
       },
       component: () => import('@/views/studyVue/goDeepComponent/customEvent')
+    },
+    {
+      path: 'slot',
+      name: 'slot',
+      meta: {
+        title: '插槽'
+      },
+      component: () => import('@/views/studyVue/goDeepComponent/slot')
     }
   ]
 }
