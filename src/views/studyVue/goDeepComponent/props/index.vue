@@ -25,7 +25,7 @@ import componentA from './components/componentA.vue'
 import componentB from './components/componentB.vue'
 
 export default defineComponent({
-  name: 'CustomEvent',
+  name: 'Props',
 
   components: {
     componentA,

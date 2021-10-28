@@ -15,6 +15,14 @@ const router = {
       component: () => import('@/views/studyVue/goDeepComponent/props')
     },
     {
+      path: 'noPropAttribute',
+      name: 'noPropAttribute',
+      meta: {
+        title: '非Prop的Attribute'
+      },
+      component: () => import('@/views/studyVue/goDeepComponent/noPropAttribute')
+    },
+    {
       path: 'customEvent',
       name: 'customEvent',
       meta: {
