@@ -45,6 +45,14 @@ const router = {
         title: 'provide/inject'
       },
       component: () => import('@/views/studyVue/goDeepComponent/provideInject')
+    },
+    {
+      path: 'dynamicAsyncComponent',
+      name: 'dynamicAsyncComponent',
+      meta: {
+        title: '动态 && 异步组件'
+      },
+      component: () => import('@/views/studyVue/goDeepComponent/dynamicAsyncComponent')
     }
   ]
 }
