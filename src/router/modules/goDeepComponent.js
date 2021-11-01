@@ -53,6 +53,14 @@ const router = {
         title: '动态 && 异步组件'
       },
       component: () => import('@/views/studyVue/goDeepComponent/dynamicAsyncComponent')
+    },
+    {
+      path: 'controlUpdate',
+      name: 'controlUpdate',
+      meta: {
+        title: '控制更新'
+      },
+      component: () => import('@/views/studyVue/goDeepComponent/controlUpdate')
     }
   ]
 }
