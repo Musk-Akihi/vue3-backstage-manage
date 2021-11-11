@@ -26,6 +26,12 @@ module.exports = {
         lessOptions: {
           javascriptEnabled: true
         }
+      },
+      /**
+       * 全局引入变量和Mixin prependData允许全局引入scss文件
+       */
+      sass: {
+        prependData: '@import "@/assets/style/index.scss";'
       }
     }
   },

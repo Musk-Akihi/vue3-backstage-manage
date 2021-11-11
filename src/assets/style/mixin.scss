@@ -1,0 +1,39 @@
+// 定义常用样式方法
+// 具体文件中使用 @include 调用
+
+// 划过样式
+@mixin hoverStyle {
+  &:hover {
+    color: #108ee9;
+    cursor: pointer;
+  }
+}
+
+// 清楚浮动
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// 单行文本超出，显示...
+@mixin ellipsis {
+  width: 100%;
+  overflow: hidden;
+  // 文本溢出显示省略号
+  text-overflow: ellipsis;
+  // 文本不会换行（单行文本溢出）
+  white-space: nowrap;
+}
+
+// 显示多行文字，超出...
+@mixin multi-line-ellipsis($num: 2) {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;
+}
