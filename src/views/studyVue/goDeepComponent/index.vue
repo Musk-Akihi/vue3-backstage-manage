@@ -1,3 +1,4 @@
+<!-- 深入组件 -->
 <template>
   <RouteContents :route-obj="goDeepComponent" />
 </template>
