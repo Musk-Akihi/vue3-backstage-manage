@@ -6,19 +6,25 @@
   <hr />
   <br />
   <ComponentB />
+  <br />
+  <hr />
+  <br />
+  <ComponentC />
 </template>
 
 <script>
-import { defineComponent, onMounted, ref } from 'vue'
+import { defineComponent, onMounted, provide, reactive, readonly, ref } from 'vue'
 import ComponentA from './components/componentA.vue'
 import ComponentB from './components/componentB.vue'
+import ComponentC from './components/componentC.vue'
 
 export default defineComponent({
   name: 'CombinationApi',
 
   components: {
     ComponentA,
-    ComponentB
+    ComponentB,
+    ComponentC
   },
 
   setup(props) {
@@ -37,12 +43,30 @@ export default defineComponent({
 
     const h2ref = ref(null)
     const ComponentA = ref(null)
-
     // onMounted(() => {
+    //   // 必须返回 ref 不然取不到Dom
     //   console.log(h2ref.value)
     //   console.log(ComponentA.value.increment())
     //   console.log('😊😊😊😊😊😊😊😊😊😊')
     // })
+
+    // 使用响应式 provide / inject 值时，建议尽可能将对响应式property的所有修改限制在定义provide组件内部
+    // 添加响应性
+    let author = ref('杜心武')
+    let personalInfo = reactive({
+      sex: 'man',
+      hobby: 'basketball',
+      subject: ['语文', '数学', '英语']
+    })
+    const modifyInfo = () => {
+      author.value = '杜飞'
+      personalInfo.sex = 'woman'
+      personalInfo.hobby = 'football'
+    }
+    // 希望通过provide传递的数据不会被inject组件更改，对其使用readonly
+    provide('author', readonly(author))
+    provide('personalInfo', personalInfo)
+    provide('modifyInfo', modifyInfo)
 
     return {
       h2ref,

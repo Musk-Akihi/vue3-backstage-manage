@@ -6,11 +6,14 @@
 import {
   defineComponent,
   onBeforeMount,
-  onBeforeUpdate,
-  onErrorCaptured,
   onMounted,
+  onBeforeUpdate,
+  onUpdated,
+  onBeforeUnmount,
   onUnmounted,
-  onUpdated
+  onErrorCaptured,
+  onActivated,
+  onDeactivated
 } from 'vue'
 
 export default defineComponent({
