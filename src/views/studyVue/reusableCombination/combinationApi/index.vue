@@ -10,6 +10,10 @@
   <hr />
   <br />
   <ComponentC />
+  <br />
+  <hr />
+  <br />
+  <ComponentD />
 </template>
 
 <script>
@@ -17,6 +21,7 @@ import { defineComponent, onMounted, provide, reactive, readonly, ref } from 'vu
 import ComponentA from './components/componentA.vue'
 import ComponentB from './components/componentB.vue'
 import ComponentC from './components/componentC.vue'
+import ComponentD from './components/componentD.vue'
 
 export default defineComponent({
   name: 'CombinationApi',
@@ -24,7 +29,8 @@ export default defineComponent({
   components: {
     ComponentA,
     ComponentB,
-    ComponentC
+    ComponentC,
+    ComponentD
   },
 
   setup(props) {
