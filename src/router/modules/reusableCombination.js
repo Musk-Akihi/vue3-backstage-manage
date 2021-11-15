@@ -21,6 +21,14 @@ const router = {
         title: 'mixin'
       },
       component: () => import('@/views/studyVue/reusableCombination/mixin')
+    },
+    {
+      path: 'directive',
+      name: 'directive',
+      meta: {
+        title: 'directive'
+      },
+      component: () => import('@/views/studyVue/reusableCombination/directive')
     }
   ]
 }
