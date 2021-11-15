@@ -13,6 +13,14 @@ const router = {
         title: 'combinationApi'
       },
       component: () => import('@/views/studyVue/reusableCombination/combinationApi')
+    },
+    {
+      path: 'mixin',
+      name: 'mixin',
+      meta: {
+        title: 'mixin'
+      },
+      component: () => import('@/views/studyVue/reusableCombination/mixin')
     }
   ]
 }
