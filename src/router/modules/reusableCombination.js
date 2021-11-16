@@ -29,6 +29,14 @@ const router = {
         title: 'directive'
       },
       component: () => import('@/views/studyVue/reusableCombination/directive')
+    },
+    {
+      path: 'teleport',
+      name: 'teleport',
+      meta: {
+        title: 'teleport'
+      },
+      component: () => import('@/views/studyVue/reusableCombination/teleport')
     }
   ]
 }
