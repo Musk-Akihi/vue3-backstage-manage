@@ -37,6 +37,14 @@ const router = {
         title: 'teleport'
       },
       component: () => import('@/views/studyVue/reusableCombination/teleport')
+    },
+    {
+      path: 'renderFunction',
+      name: 'renderFunction',
+      meta: {
+        title: 'renderFunction'
+      },
+      component: () => import('@/views/studyVue/reusableCombination/renderFunction')
     }
   ]
 }
