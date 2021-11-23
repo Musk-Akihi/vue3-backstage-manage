@@ -1,7 +1,7 @@
 <template>
   <button @click="changeCount">更改count</button>
   <br />
-  <button @click="changeName">更改name</button>
+  <button @click="changeName($event)">更改name</button>
   <br />
   <!-- 多个v-model绑定 每个v-model将同步到不同的prop上 -->
   <input type="text" :value="title" @input="$emit('update:title', $event.target.value)" />
@@ -42,10 +42,17 @@ export default defineComponent({
   },
 
   setup(props, context) {
-    const changeCount = () => {
+    const changeCount = (event) => {
+      console.log(event)
+      console.log(event.target.tagName)
+      console.log('😊😊😊😊😊😊😊😊😊😊')
+
       context.emit('changeCount')
     }
-    const changeName = () => {
+    const changeName = (event) => {
+      console.log(event)
+      console.log('😊😊😊😊😊😊😊😊😊😊')
+
       context.emit('changeName', null)
     }
 

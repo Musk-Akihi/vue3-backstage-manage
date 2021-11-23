@@ -15,4 +15,5 @@ app.config.globalProperties.$http = api
 app.use(antd)
 app.use(router)
 app.use(store)
+// DOM元素 #app 的innerHTML 将被替换为 应用根组件的模板渲染结果
 app.mount('#app')

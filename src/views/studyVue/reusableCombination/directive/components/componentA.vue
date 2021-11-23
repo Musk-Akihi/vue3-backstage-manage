@@ -39,7 +39,13 @@ export default defineComponent({
     }*/
 
     // 函数简写
-    pin: (el, binding) => {
+    pin: (el, binding, vNode, prevNode) => {
+      console.log(el)
+      console.log(binding)
+      console.log(vNode)
+      console.log(prevNode)
+      console.log('😊😊😊😊😊😊😊😊😊😊')
+
       el.style.position = 'fixed'
       const s = binding.arg || 'top'
       el.style[s] = binding.value + 'px'
