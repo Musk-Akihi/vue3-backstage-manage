@@ -2,7 +2,10 @@
   <div class="content">
     <!-- 左侧目录 -->
     <div class="level pd20">
-      <div class="first-level" @click="routeJump(firstLevelRouter)">
+      <div
+        :class="{ 'first-level': true, 'select-style': curItemPath === firstLevelRouter.path }"
+        @click="routeJump(firstLevelRouter)"
+      >
         {{ firstLevelRouter.title }}
       </div>
 
@@ -10,7 +13,7 @@
         <li
           v-for="(item, index) in secondLevelRouter"
           :key="index"
-          class="mg-tb10"
+          :class="{ 'mg-tb10': true, 'select-style': curItemPath === item.path }"
           @click="routeJump(item)"
         >
           {{ item.title }}
@@ -27,7 +30,7 @@
 
 <script>
 import { useRouter } from 'vue-router'
-import { defineComponent, reactive } from 'vue'
+import { defineComponent, reactive, ref } from 'vue'
 
 export default defineComponent({
   props: {
@@ -38,6 +41,8 @@ export default defineComponent({
   },
 
   setup(props) {
+    const curItemPath = ref(null)
+
     let firstLevelRouter = reactive({
       title: props.routeObj.meta.title,
       path: props.routeObj.path
@@ -56,10 +61,12 @@ export default defineComponent({
 
     const router = useRouter()
     const routeJump = (item) => {
+      curItemPath.value = item.path
       router.push(item.path)
     }
 
     return {
+      curItemPath,
       firstLevelRouter,
       secondLevelRouter,
       routeJump
@@ -85,6 +92,9 @@ export default defineComponent({
       li {
         @include hoverStyle;
       }
+    }
+    .select-style {
+      color: #108ee9;
     }
   }
 
