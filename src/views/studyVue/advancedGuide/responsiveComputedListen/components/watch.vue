@@ -124,7 +124,7 @@ export default defineComponent({
 
     watch(
       // () => state,
-      // state,
+      state,
       (state, prevState) => {
         console.log('deep', state.attributes.name, prevState.attributes.name)
         console.log('😊😊😊😊😊😊😊😊😊😊')
