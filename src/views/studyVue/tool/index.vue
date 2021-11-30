@@ -1,12 +1,26 @@
+<!-- 工具 -->
 <template>
-  <h1>工具</h1>
-  <router-view />
+  <RouteContents :route-obj="tool" />
 </template>
 
 <script>
 import { defineComponent } from 'vue'
+import RouteContents from '@/components/routeContents.vue'
+import tool from '@/router/modules/tool.js'
 
 export default defineComponent({
-  name: 'Tool'
+  name: 'Tool',
+
+  components: {
+    RouteContents
+  },
+
+  setup() {
+    return {
+      tool
+    }
+  }
 })
 </script>
+
+<style lang="scss" scoped></style>
