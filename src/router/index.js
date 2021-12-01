@@ -4,8 +4,8 @@ import modules from './modules'
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import('../views/Home.vue')
+    name: 'home',
+    component: () => import('../views/home/index.vue')
   },
   ...modules
 ]
