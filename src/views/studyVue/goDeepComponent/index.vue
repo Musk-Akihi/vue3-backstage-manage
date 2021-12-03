@@ -6,7 +6,7 @@
 <script>
 import { defineComponent } from 'vue'
 import RouteContents from '@/components/routeContents.vue'
-import goDeepComponent from '@/router/modules/goDeepComponent.js'
+import goDeepComponent from '@/router/modules/studyVue/goDeepComponent.js'
 
 export default defineComponent({
   name: 'GoDeepComponent',

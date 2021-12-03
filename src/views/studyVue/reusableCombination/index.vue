@@ -6,7 +6,7 @@
 <script>
 import { defineComponent } from 'vue'
 import RouteContents from '@/components/routeContents.vue'
-import reusableCombination from '@/router/modules/reusableCombination.js'
+import reusableCombination from '@/router/modules/studyVue/reusableCombination.js'
 
 export default defineComponent({
   name: 'ReusableCombination',

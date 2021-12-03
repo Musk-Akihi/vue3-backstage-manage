@@ -1,5 +1,5 @@
 const router = {
-  path: '/barrierFree',
+  path: '/studyVue/barrierFree',
   name: 'barrierFree',
   meta: {
     title: '无障碍'

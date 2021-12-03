@@ -1,5 +1,5 @@
 const router = {
-  path: '/transitionAnimation',
+  path: '/studyVue/transitionAnimation',
   name: 'transitionAnimation',
   meta: {
     title: '过渡动画'

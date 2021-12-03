@@ -1,15 +1,15 @@
-<!-- 过渡动画 -->
+<!-- 介绍 -->
 <template>
-  <RouteContents :route-obj="transitionAnimation" />
+  <RouteContents :route-obj="introduce" />
 </template>
 
 <script>
 import { defineComponent } from 'vue'
 import RouteContents from '@/components/routeContents.vue'
-import transitionAnimation from '@/router/modules/studyVue/transitionAnimation.js'
+import introduce from '@/router/modules/studyVuex/introduce.js'
 
 export default defineComponent({
-  name: 'TransitionAnimation',
+  name: 'Introduce',
 
   components: {
     RouteContents
@@ -17,8 +17,10 @@ export default defineComponent({
 
   setup() {
     return {
-      transitionAnimation
+      introduce
     }
   }
 })
 </script>
+
+<style lang="scss" scoped></style>

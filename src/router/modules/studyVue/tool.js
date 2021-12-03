@@ -1,5 +1,5 @@
 const router = {
-  path: '/tool',
+  path: '/studyVue/tool',
   name: 'tool',
   meta: {
     title: '工具'

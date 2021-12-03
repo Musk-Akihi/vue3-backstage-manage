@@ -6,7 +6,7 @@
 <script>
 import { defineComponent } from 'vue'
 import RouteContents from '@/components/routeContents.vue'
-import advancedGuide from '@/router/modules/advancedGuide.js'
+import advancedGuide from '@/router/modules/studyVue/advancedGuide.js'
 
 export default defineComponent({
   name: 'AdvancedGuide',

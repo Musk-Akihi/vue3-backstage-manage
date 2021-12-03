@@ -1,5 +1,5 @@
 const router = {
-  path: '/goDeepComponent',
+  path: '/studyVue/goDeepComponent',
   name: 'goDeepComponent',
   meta: {
     title: '深入组件'

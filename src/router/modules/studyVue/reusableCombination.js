@@ -1,5 +1,5 @@
 const router = {
-  path: '/reusableCombination',
+  path: '/studyVue/reusableCombination',
   name: 'reusableCombination',
   meta: {
     title: '可复用组合'

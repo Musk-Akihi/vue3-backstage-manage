@@ -1,5 +1,5 @@
 const router = {
-  path: '/scale',
+  path: '/studyVue/scale',
   name: 'scale',
   meta: {
     title: '规模化'
