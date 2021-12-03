@@ -8,7 +8,17 @@ import scale from './scale'
 import barrierFree from './barrierFree'
 import principle from './principle'
 
+const router = {
+  path: '/studyVue',
+  name: 'studyVue',
+  meta: {
+    title: '学习Vue'
+  },
+  component: () => import('@/views/studyVue')
+}
+
 export default [
+  router,
   base,
   goDeepComponent,
   transitionAnimation,
