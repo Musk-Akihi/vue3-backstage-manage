@@ -1,4 +1,5 @@
 import introduce from './introduce'
+import coreIdea from './coreIdea'
 
 const router = {
   path: '/studyVuex',
@@ -9,4 +10,4 @@ const router = {
   component: () => import('@/views/studyVuex')
 }
 
-export default [router, introduce]
+export default [router, introduce, coreIdea]
