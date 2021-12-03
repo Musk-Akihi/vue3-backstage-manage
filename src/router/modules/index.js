@@ -6,6 +6,7 @@ import advancedGuide from './advancedGuide'
 import tool from './tool'
 import scale from './scale'
 import barrierFree from './barrierFree'
+import principle from './principle'
 
 export default [
   base,
@@ -15,5 +16,6 @@ export default [
   advancedGuide,
   tool,
   scale,
-  barrierFree
+  barrierFree,
+  principle
 ]
