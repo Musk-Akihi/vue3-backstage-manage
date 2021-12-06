@@ -24,13 +24,24 @@ export default createStore({
     /**
      * 通过方法访问
      * 返回一个函数，来实现给getter传参
-     * t每次都会去进行调用，而不会缓存结果
+     * 每次都会去进行调用，而不会缓存结果
      */
     getTodoById: (state) => (id) => {
       return state.todos.find((todo) => todo.id === id)
     }
   },
-  mutations: {},
+  mutations: {
+    increment(state) {
+      // 变更状态
+      state.count++
+    },
+    addCount(state, payload) {
+      console.log(payload)
+      console.log('😊😊😊😊😊😊😊😊😊😊')
+
+      state.count += payload.amount
+    }
+  },
   actions: {},
   modules: {}
 })
