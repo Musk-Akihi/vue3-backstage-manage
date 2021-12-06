@@ -29,6 +29,14 @@ const router = {
         title: 'mutation'
       },
       component: () => import('@/views/studyVuex/coreIdea/mutation')
+    },
+    {
+      path: 'action',
+      name: 'action',
+      meta: {
+        title: 'action'
+      },
+      component: () => import('@/views/studyVuex/coreIdea/action')
     }
   ]
 }

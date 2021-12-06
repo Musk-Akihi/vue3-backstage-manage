@@ -42,6 +42,12 @@ export default createStore({
       state.count += payload.amount
     }
   },
-  actions: {},
+  actions: {
+    increment(context) {
+      setTimeout(() => {
+        context.commit('increment')
+      }, 1000)
+    }
+  },
   modules: {}
 })
