@@ -13,6 +13,14 @@ const router = {
         title: '单一状态树'
       },
       component: () => import('@/views/studyVuex/coreIdea/state')
+    },
+    {
+      path: 'getter',
+      name: 'getter',
+      meta: {
+        title: 'getter'
+      },
+      component: () => import('@/views/studyVuex/coreIdea/getter')
     }
   ]
 }
