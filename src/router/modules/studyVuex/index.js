@@ -1,5 +1,6 @@
 import introduce from './introduce'
 import coreIdea from './coreIdea'
+import advanced from './advanced'
 
 const router = {
   path: '/studyVuex',
@@ -10,4 +11,4 @@ const router = {
   component: () => import('@/views/studyVuex')
 }
 
-export default [router, introduce, coreIdea]
+export default [router, introduce, coreIdea, advanced]
