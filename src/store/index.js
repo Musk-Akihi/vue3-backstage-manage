@@ -51,7 +51,7 @@ export default createStore({
       state.count++
     },
     addCount(state, payload) {
-      state.count += payload.amount
+      state.count = payload.amount
     }
   },
   actions: {

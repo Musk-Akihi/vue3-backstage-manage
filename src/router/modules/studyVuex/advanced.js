@@ -29,6 +29,14 @@ const router = {
         title: '插件'
       },
       component: () => import('@/views/studyVuex/advanced/plugins')
+    },
+    {
+      path: 'formHandle',
+      name: 'formHandle',
+      meta: {
+        title: '表单处理'
+      },
+      component: () => import('@/views/studyVuex/advanced/formHandle')
     }
   ]
 }
