@@ -62,5 +62,10 @@ export default createStore({
     }
   },
   modules: {},
-  plugins: [myPlugin, createLogger()]
+  plugins: [myPlugin, createLogger()],
+  /**
+   * 严格模式
+   * 无论何时发生了状态变更且不是由mutation函数引起的，将会抛出错误。
+   */
+  strict: process.env.NODE_ENV !== 'production'
 })
