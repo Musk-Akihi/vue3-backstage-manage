@@ -1,4 +1,19 @@
 import { createStore } from 'vuex'
+import { createLogger } from 'vuex'
+
+const myPlugin = (store) => {
+  // 当 store 初始化后调用
+  console.log(store.state)
+  console.log('😊😊😊😊😊😊😊😊😊😊')
+
+  store.subscribe((mutation, state) => {
+    // 每次 mutation 之后调用
+    // mutation 的格式为 { type, payload }
+    // console.log(mutation)
+    console.log(state)
+    console.log('😊😊😊😊😊😊😊😊😊😊')
+  })
+}
 
 export default createStore({
   state: {
@@ -36,9 +51,6 @@ export default createStore({
       state.count++
     },
     addCount(state, payload) {
-      console.log(payload)
-      console.log('😊😊😊😊😊😊😊😊😊😊')
-
       state.count += payload.amount
     }
   },
@@ -49,5 +61,6 @@ export default createStore({
       }, 1000)
     }
   },
-  modules: {}
+  modules: {},
+  plugins: [myPlugin, createLogger()]
 })

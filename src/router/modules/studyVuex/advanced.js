@@ -21,6 +21,14 @@ const router = {
         title: '组合式Api'
       },
       component: () => import('@/views/studyVuex/advanced/compositionApi')
+    },
+    {
+      path: 'plugins',
+      name: 'plugins',
+      meta: {
+        title: '插件'
+      },
+      component: () => import('@/views/studyVuex/advanced/plugins')
     }
   ]
 }
