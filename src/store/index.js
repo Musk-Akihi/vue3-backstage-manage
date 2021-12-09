@@ -2,8 +2,8 @@ import { createStore, createLogger } from 'vuex'
 
 const myPlugin = (store) => {
   // 当 store 初始化后调用
-  console.log(store.state)
-  console.log('😊😊😊😊😊😊😊😊😊😊')
+  // console.log(store.state)
+  // console.log('😊😊😊😊😊😊😊😊😊😊')
 
   store.subscribe((mutation, state) => {
     // 每次 mutation 之后调用
