@@ -1,5 +1,4 @@
-import { createStore } from 'vuex'
-import { createLogger } from 'vuex'
+import { createStore, createLogger } from 'vuex'
 
 const myPlugin = (store) => {
   // 当 store 初始化后调用
