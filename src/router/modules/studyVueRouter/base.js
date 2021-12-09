@@ -6,14 +6,14 @@ const router = {
   },
   component: () => import('@/views/studyVueRouter/base'),
   children: [
-    // {
-    //   path: 'projectStructure',
-    //   name: 'projectStructure',
-    //   meta: {
-    //     title: '项目结构'
-    //   },
-    //   component: () => import('@/views/studyVueRouter/base/projectStructure')
-    // }
+    {
+      path: 'gettingStarted',
+      name: 'gettingStarted',
+      meta: {
+        title: '入门'
+      },
+      component: () => import('@/views/studyVueRouter/base/gettingStarted')
+    }
   ]
 }
 
