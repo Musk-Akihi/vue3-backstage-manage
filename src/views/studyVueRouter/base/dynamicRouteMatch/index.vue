@@ -1,7 +1,9 @@
 <!-- dynamicRouteMatch -->
 <template>
   <h2>dynamicRouteMatch</h2>
-  <a-button @click="jump">跳转到componentA组件</a-button>
+  <a-button @click="jumpA">跳转到componentA组件</a-button>
+  <br />
+  <a-button @click="jumpB">跳转到componentB组件</a-button>
 
   <router-view />
 </template>
@@ -16,11 +18,15 @@ export default defineComponent({
   setup(props) {
     const router = useRouter()
 
-    const jump = () => {
+    const jumpA = () => {
       router.push('/studyVueRouter/base/dynamicRouteMatch/componentA/杜心武')
     }
+    const jumpB = () => {
+      router.push('/studyVueRouter/base/dynamicRouteMatch/componentB/10')
+    }
     return {
-      jump
+      jumpA,
+      jumpB
     }
   }
 })

@@ -29,7 +29,16 @@ const router = {
             title: '带参数的动态路由匹配'
           },
           component: () =>
-            import('@/views/studyVueRouter/base/dynamicRouteMatch/components/componentA.vue')
+            import('@/views/studyVueRouter/base/dynamicRouteMatch/components/componentA')
+        },
+        {
+          path: 'componentB/:id',
+          name: 'componentB',
+          meta: {
+            title: '响应路由参数的变化'
+          },
+          component: () =>
+            import('@/views/studyVueRouter/base/dynamicRouteMatch/components/componentB')
         }
       ]
     }
