@@ -1,5 +1,6 @@
 import base from './base'
 import advanced from './advanced'
+import error from './error'
 
 const router = {
   path: '/studyVueRouter',
@@ -10,4 +11,4 @@ const router = {
   component: () => import('@/views/studyVueRouter')
 }
 
-export default [router, base, advanced]
+export default [router, base, advanced, ...error]
