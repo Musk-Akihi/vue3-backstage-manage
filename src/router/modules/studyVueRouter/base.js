@@ -41,6 +41,15 @@ const router = {
             import('@/views/studyVueRouter/base/dynamicRouteMatch/components/componentB')
         }
       ]
+    },
+    {
+      path: 'routeMatchGrammar',
+      name: 'routeMatchGrammar',
+      meta: {
+        title: '路由匹配语法'
+      },
+      component: () => import('@/views/studyVueRouter/base/routeMatchGrammar'),
+      children: []
     }
   ]
 }
