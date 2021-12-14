@@ -48,8 +48,15 @@ const router = {
       meta: {
         title: '路由匹配语法'
       },
-      component: () => import('@/views/studyVueRouter/base/routeMatchGrammar'),
-      children: []
+      component: () => import('@/views/studyVueRouter/base/routeMatchGrammar')
+    },
+    {
+      path: 'programmaticNavigation',
+      name: 'programmaticNavigation',
+      meta: {
+        title: '编程式导航'
+      },
+      component: () => import('@/views/studyVueRouter/base/programmaticNavigation')
     }
   ]
 }

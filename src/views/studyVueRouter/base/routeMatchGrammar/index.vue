@@ -1,8 +1,6 @@
 <!-- routeMatchGrammar -->
 <template>
   <h2>routeMatchGrammar</h2>
-
-  <router-view />
 </template>
 
 <script>
