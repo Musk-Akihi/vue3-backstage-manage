@@ -57,6 +57,14 @@ const router = {
         title: '编程式导航'
       },
       component: () => import('@/views/studyVueRouter/base/programmaticNavigation')
+    },
+    {
+      path: 'nameRouter',
+      name: 'nameRouter',
+      meta: {
+        title: '命名路由'
+      },
+      component: () => import('@/views/studyVueRouter/base/nameRouter')
     }
   ]
 }
