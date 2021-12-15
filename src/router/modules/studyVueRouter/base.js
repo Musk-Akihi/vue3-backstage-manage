@@ -65,6 +65,24 @@ const router = {
         title: '命名路由'
       },
       component: () => import('@/views/studyVueRouter/base/nameRouter')
+    },
+    {
+      path: 'nameView',
+      name: 'nameView',
+      meta: {
+        title: '命名视图'
+      },
+      component: () => import('@/views/studyVueRouter/base/nameView'),
+      children: [
+        {
+          path: '',
+          // component: () => import('@/views/studyVueRouter/base/nameView/components/componentA')
+          components: {
+            // key值与router-view 的 name 相映射
+            nameView: () => import('@/views/studyVueRouter/base/nameView/components/componentA')
+          }
+        }
+      ]
     }
   ]
 }
