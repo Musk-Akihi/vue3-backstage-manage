@@ -75,7 +75,13 @@ const router = {
       component: () => import('@/views/studyVueRouter/base/nameView'),
       children: [
         {
+          /**
+           * /studyVueRouter/base/nameView
+           * /studyVueRouter/base/nameView/list
+           * /people
+           */
           path: '',
+          alias: ['list', '/people'],
           // component: () => import('@/views/studyVueRouter/base/nameView/components/componentA')
           components: {
             // key值与router-view 的 name 相映射
@@ -83,6 +89,16 @@ const router = {
           }
         }
       ]
+    },
+    {
+      path: 'redirectAlias',
+      name: 'redirectAlias',
+      meta: {
+        title: '重定向别名'
+      },
+      // redirect: '/studyVueRouter/base/nameView'
+      redirect: { name: 'nameView' }
+      // component: () => import('@/views/studyVueRouter/base/redirectAlias')
     }
   ]
 }
