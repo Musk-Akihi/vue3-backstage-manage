@@ -99,6 +99,41 @@ const router = {
       // redirect: '/studyVueRouter/base/nameView'
       redirect: { name: 'nameView' }
       // component: () => import('@/views/studyVueRouter/base/redirectAlias')
+    },
+    {
+      path: 'routerComponentPassOn',
+      name: 'routerComponentPassOn',
+      meta: {
+        title: '路由组件传参'
+      },
+      component: () => import('@/views/studyVueRouter/base/routerComponentPassOn'),
+      children: [
+        {
+          path: 'componentA/:id',
+          name: 'componentA',
+          meta: {
+            title: '路由组件传参A'
+          },
+          /**
+           * props 为true的时候，route.params 将被设置为组件的props
+           */
+          // component: () =>
+          //   import('@/views/studyVueRouter/base/routerComponentPassOn/components/componentA'),
+          // props: true
+          // 命名视图
+          components: {
+            routerComponentPassOn: () =>
+              import('@/views/studyVueRouter/base/routerComponentPassOn/components/componentA')
+          },
+          // props: {
+          //   routerComponentPassOn: true
+          // }
+          props: {
+            // 当值不是Boolean，是一个Object时，它将原样设置为组件props。当props是静态的时候很有用。
+            routerComponentPassOn: { newsletterPopup: true }
+          }
+        }
+      ]
     }
   ]
 }
