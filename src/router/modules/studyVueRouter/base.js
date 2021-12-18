@@ -134,6 +134,14 @@ const router = {
           }
         }
       ]
+    },
+    {
+      path: 'differentHistoryModes',
+      name: 'differentHistoryModes',
+      meta: {
+        title: '不同的历史记录模式'
+      },
+      component: () => import('@/views/studyVueRouter/base/differentHistoryModes')
     }
   ]
 }
