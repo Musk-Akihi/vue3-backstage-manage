@@ -30,6 +30,14 @@ const router = {
       //   next()
       // }
       beforeEnter: [hash]
+    },
+    {
+      path: 'routeMetaFields',
+      name: 'routeMetaFields',
+      meta: {
+        title: '路由元信息'
+      },
+      component: () => import('@/views/studyVueRouter/advanced/routeMetaFields')
     }
   ]
 }
