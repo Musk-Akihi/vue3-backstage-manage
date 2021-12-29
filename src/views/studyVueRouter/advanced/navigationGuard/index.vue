@@ -78,6 +78,11 @@ export default defineComponent({
 
     return {}
   }
+
+  // mounted() {
+  //   console.log(this)
+  //   console.log('😊😊😊😊😊😊😊😊😊😊')
+  // }
 })
 </script>
 

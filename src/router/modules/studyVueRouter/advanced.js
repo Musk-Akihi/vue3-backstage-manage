@@ -38,6 +38,22 @@ const router = {
         title: '路由元信息'
       },
       component: () => import('@/views/studyVueRouter/advanced/routeMetaFields')
+    },
+    {
+      path: 'compositionApi',
+      name: 'compositionApi',
+      meta: {
+        title: 'Vue Router 和 组合式Api'
+      },
+      component: () => import('@/views/studyVueRouter/advanced/compositionApi')
+    },
+    {
+      path: 'scrollBehavior',
+      name: 'scrollBehavior',
+      meta: {
+        title: '滚动行为'
+      },
+      component: () => import('@/views/studyVueRouter/advanced/scrollBehavior')
     }
   ]
 }

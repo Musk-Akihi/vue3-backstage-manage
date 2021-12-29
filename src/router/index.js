@@ -12,7 +12,15 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    // console.log(to)
+    // console.log(from)
+    // savedPosition 只有当是一个 popstate 导航时才可用(由浏览器的前进/后退按钮触发)
+    // console.log(savedPosition)
+    // console.log('😊😊😊😊😊😊😊😊😊😊')
+    // return 期望滚动到哪个的位置
+  }
 })
 
 // 全局前置守卫
