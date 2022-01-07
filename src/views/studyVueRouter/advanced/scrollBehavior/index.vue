@@ -8,6 +8,7 @@
 
 <script>
 import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'ScrollBehavior',
@@ -15,6 +16,13 @@ export default defineComponent({
   components: {},
 
   setup() {
+    const router = useRouter()
+    // 检查路由是否存在
+    console.log(router.hasRoute('advanced'))
+    // 获取一个包含所有路由记录的数组
+    console.log(router.getRoutes())
+    console.log('😊😊😊😊😊😊😊😊😊😊')
+
     return {}
   }
 })
