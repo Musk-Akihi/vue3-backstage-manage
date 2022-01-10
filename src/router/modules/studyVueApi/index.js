@@ -1,3 +1,5 @@
+import applicationConfig from './applicationConfig'
+
 const router = {
   path: '/studyVueApi',
   name: 'studyVueApi',
@@ -7,4 +9,4 @@ const router = {
   component: () => import('@/views/studyVueApi')
 }
 
-export default [router]
+export default [router, applicationConfig]
