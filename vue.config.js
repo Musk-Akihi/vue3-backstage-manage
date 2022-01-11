@@ -63,5 +63,10 @@ module.exports = {
       .use('image-webpack-loader')
       .loader('image-webpack-loader')
       .options({ bypassOnDebug: true })
-  }
+  },
+  // 确定是运行时候编译
+  /**
+   * 是否使用包含运行时编译器的Vue构建版本
+   */
+  runtimeCompiler: true
 }

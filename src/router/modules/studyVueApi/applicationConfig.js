@@ -2,7 +2,7 @@ const router = {
   path: '/studyVueApi/applicationConfig',
   name: 'applicationConfig',
   meta: {
-    title: '介绍'
+    title: '应用配置'
   },
   component: () => import('@/views/studyVueApi/applicationConfig')
 }
