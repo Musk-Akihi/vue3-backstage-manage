@@ -41,7 +41,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.20.0",
-    "image-webpack-loader": "^8.0.1",
+    "image-webpack-loader": "^8.1.0",
     "less": "^4.1.2",
     "less-loader": "^7.3.0",
     "lint-staged": "^9.5.0",
